@@ -1,5 +1,7 @@
 
+
 import { useEffect, useState } from 'react';
+import { NavLink, Link } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -15,7 +17,9 @@ function BasicExample() {
   return (
     <Navbar expanded={expanded} className="navbar-dark" bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home" onClick={() => setExpanded(false)}>JTank</Navbar.Brand>
+        <Link to="/"
+          className='logo' 
+          onClick={() => setExpanded(false)}>JobTank</Link>
         
           <Navbar.Toggle aria-controls="basic-navbar-nav"
           onClick = {() => setExpanded(expanded ? false : "expanded")}
@@ -25,10 +29,11 @@ function BasicExample() {
           <Nav className="ms-auto">
             {
               navItems.map((item, index) =>
-                <Nav.Link key={index} 
+                <NavLink key={index}
+                className='nav-link' 
                 to={item.path} 
                 onClick={() => setExpanded(false)}>
-                {item.title} </Nav.Link>)
+                {item.title} </NavLink>)
             }
           </Nav>
         </Navbar.Collapse>
