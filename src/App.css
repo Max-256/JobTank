@@ -53,10 +53,16 @@
 /* Register */
 
 .formBorder{
-    border: 1px solid lightgray;
+    border: 1px solid rgb(243, 239, 239);
     max-width: 300px;
     padding: 1rem;
     margin: auto;
     margin-top: 2rem;
     border-radius: 5px;
+}
+
+/* login */
+.registerLink {
+    margin-left: 0.5rem;
+    text-decoration: none;
 }

@@ -28,7 +28,7 @@ function Register(props) {
         <div className='formBorder'>
             <Form onSubmit={handleSubmit}>
                 {renderInput('username', 'Username')}
-                {renderInput('email', 'email', 'email')}
+                {renderInput('email', 'Email', 'email')}
                 {renderInput('password', 'Password', 'password')}
                 {renderButton('Register')}
             </Form>
