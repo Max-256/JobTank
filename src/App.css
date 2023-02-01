@@ -49,3 +49,14 @@
 .support h4 {
     margin-bottom: 1.5rem;
 }
+
+/* Register */
+
+.formBorder{
+    border: 1px solid lightgray;
+    max-width: 300px;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 2rem;
+    border-radius: 5px;
+}
