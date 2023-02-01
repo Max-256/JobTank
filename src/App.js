@@ -1,4 +1,6 @@
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Route } from 'react-router-dom';
 import Topnav from './components/Topnav';
 import About from './components/About';
@@ -12,6 +14,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <ToastContainer />
       <Topnav />
       <main className='container'>
       <Route path='/about' component={About}/>

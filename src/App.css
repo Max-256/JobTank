@@ -39,3 +39,13 @@
 .about{
     margin-top: 2rem;
 }
+
+/* support */
+.support{
+    margin-top: 1.5rem;
+    max-width: 700px;
+}
+
+.support h4 {
+    margin-bottom: 1.5rem;
+}
