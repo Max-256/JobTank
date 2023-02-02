@@ -53,7 +53,7 @@
 /* Register */
 
 .formBorder{
-    border: 1px solid rgb(243, 239, 239);
+    border: 1px solid  #dfe1fc;
     max-width: 300px;
     padding: 1rem;
     margin: auto;
@@ -65,4 +65,17 @@
 .registerLink {
     margin-left: 0.5rem;
     text-decoration: none;
+}
+
+/* recruiter */
+
+.jobForm{
+    margin-top: 2rem;
+    margin: auto;
+    max-width: 900px;
+}
+
+.jobForm h5{
+    text-align: center;
+    margin-top: 2rem;
 }
