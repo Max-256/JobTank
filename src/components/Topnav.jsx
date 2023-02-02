@@ -15,7 +15,7 @@ function BasicExample() {
 
 
   return (
-    <Navbar expanded={expanded} className="navbar-dark" bg="light" expand="lg">
+    <Navbar expanded={expanded} sticky="top" className="navbar-dark" bg="light" expand="lg">
       <Container>
         <Link to="/"
           className='logo' 
