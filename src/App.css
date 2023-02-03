@@ -124,3 +124,65 @@ body{
     background: 0;
     color: #12143b;
 }
+
+/* jobAdd */
+
+.ad{
+    border: 1px solid lightgray;
+    padding: 1rem;
+    background: white;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.ad-header{
+    margin-bottom: 1rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.ad-header img{
+    width: 40px;
+    height: 40px;
+}
+
+.ad-header li{
+    list-style: none;
+}
+
+.ad-body{
+    line-height: 1.7;
+}
+
+.detailsLink{
+    display: block;
+    text-decoration: none;
+    background: #12143b;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding: 0.3rem;
+    margin-top: 1.2rem;
+    transition: 500ms;
+}
+
+.detailsLink:hover{
+    background: white;
+    color: #12143b;
+    border: 1px solid #12143b;
+}
+
+@media screen and (min-width: 768px) {
+    .grid-1x2{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ad-header{
+        border-bottom: 0;
+    }
+}
+
+.ad-header li > ul{
+    margin-bottom: 0.4rem;
+}
