@@ -24,7 +24,7 @@ function Support(props) {
   );
 
   return (
-    <div className="support">
+    <div className="mt-5 support">
       <h4>Need help?, it's okay, we are right here...</h4>
       <Form onSubmit={handleSubmit}>
         {renderTextarea("message", "message")}

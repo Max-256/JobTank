@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function About(props) {
   return (
-    <div className="about">
+    <div className="mt-5 about">
       <h3>Hi, welcome to the JobTank and here's our story...</h3>
       <p>
         We are a home to both recruiters and job seekers by providing a bridge
@@ -15,7 +15,7 @@ function About(props) {
         qualifications.
       </p>
       <p>We bring applicants closer to their dream job</p>
-      <Link className="browse" to="#">
+      <Link className="browse" to="/">
         Browse Jobs
       </Link>
     </div>
