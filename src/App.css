@@ -186,3 +186,36 @@ body{
 .ad-header li > ul{
     margin-bottom: 0.4rem;
 }
+
+/* job-details */
+.job-details{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.job-details h4 {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.job-details h5 {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.apply{
+    display: block;
+    margin: 1rem auto;
+    text-decoration: none;
+}
+
+/* not found */
+.not-found{
+    text-align: center;
+}
+
+.not-found img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 2rem;
+}
