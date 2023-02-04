@@ -5,6 +5,7 @@ import JobAdd from './JobAdd';
 function Home(props) {
     return (
         <div>
+            <Hero />
             <JobAdd />
         </div>
     );
