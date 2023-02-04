@@ -9,7 +9,6 @@ import Register from './components/Register';
 import SignIn from './components/Sign-in';
 import Support from './components/Support';
 import JobDetails from './components/JobDetails';
-import Application from './components/Application';
 import Home from './components/Home';
 import NotFound from './components/NotFound';
 import './App.css';
@@ -27,7 +26,6 @@ function App() {
       <Route path='/sign-in' component={SignIn}/>
       <Route path='/support' component={Support}/>
       <Route path='/job-details' component={JobDetails}/>
-      <Route path='/application' component={Application}/>
       <Route path='/notfound' component={NotFound}/>
       <Route path='/' exact component={Home}/>
       <Redirect to="/notfound" />

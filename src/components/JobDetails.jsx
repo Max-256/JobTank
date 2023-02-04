@@ -41,10 +41,13 @@ function JobDetails(props) {
             <h5>Benefits</h5>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatibus qui provident eligendi consequuntur enim!
 
+            <h5>How To apply</h5>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ex suscipit excepturi! Veniam officia error qui fuga neque ullam beatae?
+
             <h5>Other</h5>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ullam exercitationem soluta cupiditate natus eaque!
 
-            <Link className='apply' to="/application">Proceed to apply</Link>
+            <Link className='back' to="/">Back Home</Link>
         </div>
     );
 }

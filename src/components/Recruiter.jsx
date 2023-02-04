@@ -15,6 +15,7 @@ function Recruiter(props) {
         qualifications: "",
         experience: "",
         benefits: "",
+        howToApply: "",
         other: "",
         dutyStation: "",
         deadline: ""
@@ -30,6 +31,7 @@ function Recruiter(props) {
         qualifications: Joi.string().trim().required(),
         experience: Joi.string().trim().required(),
         benefits: Joi.string().trim(),
+        howToApply: Joi.string().trim().max(255).required(),
         other: Joi.string().trim(),
         dutyStation: Joi.string().trim().max(255).required(),
         deadline: Joi.date().required()
@@ -58,7 +60,8 @@ function Recruiter(props) {
             {renderTextarea("qualifications", "Qualifications and skills")}
             {renderTextarea("experience", "Proffessional Experience")}
             {renderTextarea("benefits", "Benefits")}
-            {renderTextarea("other", "Others")}
+            {renderTextarea("howToApply", "How to apply")}
+            {renderTextarea("other", "Other")}
             {renderButton("POST JOB")}
             </Form>
         </div>
