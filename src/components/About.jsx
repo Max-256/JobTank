@@ -10,11 +10,13 @@ function About(props) {
         in-between.
       </p>
       <p>
-        In the JobTank, recruiters post open jobs and the prospective applicants
-        apply directly to the jobs which best match their interests and
-        qualifications.
+        In the JobTank, recruiters post open jobs. These are then accessed by a 
+        wide number of prospective applicants which increases the chances of 
+        getting really talented candidates. <br/>
+        Applications then come in from a pool of candidates following the means
+        of application as specified by the recruiter.
       </p>
-      <p>We bring applicants closer to their dream job</p>
+      <p>We narrow the information gap between recruiters and applicants</p>
       <Link className="browse" to="/">
         Browse Jobs
       </Link>

@@ -25,16 +25,15 @@ function Support(props) {
 
   return (
     <div className="mt-5 support">
-      <h4>Need help?, it's okay, we are right here...</h4>
+      <h5>We are right here...</h5>
       <Form onSubmit={handleSubmit}>
         {renderTextarea("message", "message")}
         {renderButton("SEND")}
       </Form>
-      <span>OR</span>
-      <p>
+        OR <br/>     
         Reach us directly through; <br />
         Phone: +256 774 159 449
-      </p>
+     
     </div>
   );
 }

@@ -14,16 +14,6 @@ body{
     font-size: xx-large;
 }
 
- p {
-    font-size: 1.3rem;
-    max-width: 800px;
-   }
-
-@media screen and (min-width: 768px) {
-    p {
-        font-size: 1.2rem;
-    }
-}
 
 /* About */
 
@@ -51,7 +41,7 @@ body{
     margin: auto;
 }
 
-.support h4 {
+.support h5 {
     margin-bottom: 1.5rem;
 }
 
@@ -157,7 +147,7 @@ body{
 .detailsLink{
     display: block;
     text-decoration: none;
-    background: #12143b;
+    background: #2c2c34;
     color: white;
     width: 100%;
     text-align: center;
