@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import getJobs from '../services/jobService';
+import {getJobs} from '../services/jobService';
 import jobicon from '../images/job.png';
 
 function JobAdd(props) {
@@ -11,8 +11,8 @@ function JobAdd(props) {
     return (
         <div>
         { 
-        jobs.map( (job, index) => 
-            <div key={index} className='mt-5 ad grid-1x2'>
+        jobs.map( job => 
+            <div key={job._id} className='mt-5 ad grid-1x2'>
 
             <div className='ad-header row'>
                 <div className='col-2'><img src={jobicon} alt="job icon" /> </div>
@@ -39,7 +39,7 @@ function JobAdd(props) {
             <div className='ad-body'>
                 <h5>Qualifications</h5> 
                 {job.qualifications}
-                <Link className='detailsLink' to="/job-details">more details</Link>
+                <Link className='detailsLink' to={`/job-details/${job._id}`}>more details</Link>
             </div>
             </div>)
         }   

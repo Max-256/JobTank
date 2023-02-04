@@ -25,7 +25,7 @@ function App() {
       <Route path='/register' component={Register}/>
       <Route path='/sign-in' component={SignIn}/>
       <Route path='/support' component={Support}/>
-      <Route path='/job-details' component={JobDetails}/>
+      <Route path='/job-details/:id' component={JobDetails}/>
       <Route path='/notfound' component={NotFound}/>
       <Route path='/' exact component={Home}/>
       <Redirect to="/notfound" />

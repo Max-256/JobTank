@@ -1,6 +1,7 @@
 
 const jobs = [
-    {
+    {   
+        _id: 1,
         companyName: "Deloitte",
         deadline: "1/5/2023",
         aboutCompany: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam debitis doloribus ipsam, repudiandae optio non ipsa facilis modi explicabo maxime placeat reiciendis nostrum deserunt nemo?",
@@ -14,6 +15,7 @@ const jobs = [
         other: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci, laborum maiores facere optio dolorem."
     },
     {
+        _id: 2,
         companyName: "Speedag International",
         deadline: "1/5/2023",
         aboutCompany: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam debitis doloribus ipsam, repudiandae optio non ipsa facilis modi explicabo maxime placeat reiciendis nostrum deserunt nemo?",
@@ -27,6 +29,7 @@ const jobs = [
         other: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci, laborum maiores facere optio dolorem."
     },
     {
+        _id: 3,
         companyName: "Makerere University",
         deadline: "1/5/2023",
         aboutCompany: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam debitis doloribus ipsam, repudiandae optio non ipsa facilis modi explicabo maxime placeat reiciendis nostrum deserunt nemo?",
@@ -40,6 +43,7 @@ const jobs = [
         other: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci, laborum maiores facere optio dolorem."
     },
     {
+        _id: 4,
         companyName: "Stanbic Bank",
         deadline: "1/5/2023",
         aboutCompany: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam debitis doloribus ipsam, repudiandae optio non ipsa facilis modi explicabo maxime placeat reiciendis nostrum deserunt nemo?",
@@ -53,6 +57,7 @@ const jobs = [
         other: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci, laborum maiores facere optio dolorem."
     },
     {
+        _id: 5,
         companyName: "Agha Khan Hospital",
         deadline: "1/5/2023",
         aboutCompany: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam debitis doloribus ipsam, repudiandae optio non ipsa facilis modi explicabo maxime placeat reiciendis nostrum deserunt nemo?",
@@ -72,5 +77,9 @@ const getJobs = () => {
     return jobs;
 };
 
-module.exports = getJobs;
+const getJob = (id) => {
+    return jobs.filter( job => job._id == id);
+};
+
+module.exports = { getJobs, getJob };
 

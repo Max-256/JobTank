@@ -1,53 +1,65 @@
-import React from 'react';
+
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { getJob } from '../services/jobService';
 
 function JobDetails(props) {
+    
+    const id = props.match.params.id;
+    
+    const [job, setJob] = useState([]);
+    useEffect(() => setJob(getJob(id)), []);
+
     return (
-        <div className='mt-4 job-details'>
+        <div>
+            { job.map( (jb, index) => 
+            <div key={index} className='mt-4 job-details'>
             <h4>JOB DETAILS</h4>
 
             <div className='row'>
                 <div className='col'>
                     <h5>Company</h5>
-                    Airbus 
+                    {jb.companyName}
                 </div>
                 <div className='col'>
                     <h5>Deadline</h5>
-                    1/12/2000
+                    {jb.deadline}
                 </div>
             </div>
 
 
             <h5>About Company</h5>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore cum iure itaque quisquam commodi odio sint. Explicabo maiores quaerat eius? Magni eaque ea iusto beatae consequunturr epellendus rem, nam temporibus.
+            {jb.aboutCompany}
 
             <h4>JOB SUMMARY</h4>
 
             <h5>Title</h5>
-            Marketing Officer
+            {jb.title}
 
             <h5>Location</h5>
-            Kisumu, Kenya
+            {jb.location}
 
             <h5>Duties And Responsibilities</h5>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae iure harum minima illo? Laudantium, assumenda, itaque consequuntur quo voluptate libero ab nesciunt aliquam quod beatae natus in temporibus quia odit accusantium dolores? Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.
+            {jb.duties}
 
             <h5>Qualifications And Skills</h5>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas temporibus voluptate expedita aut id, provident molestias obcaecati, maxime assumenda recusandae vel fugit voluptatibus quisquam hic!
+            {jb.qualifications}
 
             <h5>Proffesional Experience</h5>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis tenetur unde rerum quaerat, illo eligendi?
+            {jb.experience}
 
             <h5>Benefits</h5>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatibus qui provident eligendi consequuntur enim!
+            {jb.benefits}
 
             <h5>How To apply</h5>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ex suscipit excepturi! Veniam officia error qui fuga neque ullam beatae?
+            {jb.howToApply}
 
             <h5>Other</h5>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ullam exercitationem soluta cupiditate natus eaque!
+            {jb.other}
 
             <Link className='back' to="/">Back Home</Link>
+        </div>
+        )}
         </div>
     );
 }
