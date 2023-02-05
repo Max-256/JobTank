@@ -19,43 +19,43 @@ function JobDetails(props) {
             <div className='row'>
                 <div className='col'>
                     <h6>Company</h6>
-                    {jb.companyName}
+                    <p>{jb.companyName}</p>
                 </div>
                 <div className='col'>
                     <h6>Deadline</h6>
-                    {jb.deadline}
+                    <p>{jb.deadline}</p>
                 </div>
             </div>
 
 
             <h6>About Company</h6>
-            {jb.aboutCompany}
+            <p>{jb.aboutCompany}</p>
 
             <h5>JOB SUMMARY</h5>
 
             <h6>Title</h6>
-            {jb.title}
+            <p>{jb.title}</p>
 
             <h6>Location</h6>
-            {jb.location}
+            <p>{jb.location}</p>
 
             <h6>Duties And Responsibilities</h6>
-            {jb.duties}
+            <p>{jb.duties}</p>
 
             <h6>Qualifications And Skills</h6>
-            {jb.qualifications}
+            <p>{jb.qualifications}</p>
 
             <h6>Proffesional Experience</h6>
-            {jb.experience}
+            <p>{jb.experience}</p>
 
             <h6>Benefits</h6>
-            {jb.benefits}
+            <p>{jb.benefits}</p>
 
             <h6>How To apply</h6>
-            {jb.howToApply}
+            <p>{jb.howToApply}</p>
 
             <h6>Other</h6>
-            {jb.other}
+            <p>{jb.other}</p>
 
             <Link className='back' to="/">Back Home</Link>
         </div>
