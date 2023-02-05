@@ -184,12 +184,12 @@ body{
     margin: auto;
 }
 
-.job-details h4 {
+.job-details h5 {
     text-align: center;
     margin-top: 1rem;
 }
 
-.job-details h5 {
+.job-details h6 {
     margin-top: 1rem;
     margin-bottom: 0;
 }

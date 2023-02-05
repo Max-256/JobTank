@@ -8,6 +8,7 @@ function JobAdd(props) {
     const [jobs, setJobs] = useState([]);
     useEffect(() => setJobs(getJobs()),[]);
 
+
     return (
         <div>
         { 

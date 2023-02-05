@@ -14,47 +14,47 @@ function JobDetails(props) {
         <div>
             { job.map( (jb, index) => 
             <div key={index} className='mt-4 job-details'>
-            <h4>JOB DETAILS</h4>
+            <h5>JOB DETAILS</h5>
 
             <div className='row'>
                 <div className='col'>
-                    <h5>Company</h5>
+                    <h6>Company</h6>
                     {jb.companyName}
                 </div>
                 <div className='col'>
-                    <h5>Deadline</h5>
+                    <h6>Deadline</h6>
                     {jb.deadline}
                 </div>
             </div>
 
 
-            <h5>About Company</h5>
+            <h6>About Company</h6>
             {jb.aboutCompany}
 
-            <h4>JOB SUMMARY</h4>
+            <h5>JOB SUMMARY</h5>
 
-            <h5>Title</h5>
+            <h6>Title</h6>
             {jb.title}
 
-            <h5>Location</h5>
+            <h6>Location</h6>
             {jb.location}
 
-            <h5>Duties And Responsibilities</h5>
+            <h6>Duties And Responsibilities</h6>
             {jb.duties}
 
-            <h5>Qualifications And Skills</h5>
+            <h6>Qualifications And Skills</h6>
             {jb.qualifications}
 
-            <h5>Proffesional Experience</h5>
+            <h6>Proffesional Experience</h6>
             {jb.experience}
 
-            <h5>Benefits</h5>
+            <h6>Benefits</h6>
             {jb.benefits}
 
-            <h5>How To apply</h5>
+            <h6>How To apply</h6>
             {jb.howToApply}
 
-            <h5>Other</h5>
+            <h6>Other</h6>
             {jb.other}
 
             <Link className='back' to="/">Back Home</Link>

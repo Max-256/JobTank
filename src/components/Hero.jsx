@@ -1,19 +1,8 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import {ImSearch} from 'react-icons/im';
 
-function Hero(props) {
-    const [query, setQuery] = useState("");
-    
-    const handleChange = e => {
-        setQuery(e.target.value);
-    }
-
-    const handleSearch = () => {
-        console.log(query);
-        setQuery("");
-    }
-
+function Hero({onSearch, onChange, query}) {
     return (
         <div className='hero' >
             <h4>"Walking with you to your dream job"</h4>
@@ -22,11 +11,11 @@ function Hero(props) {
                 <span>
                  <input value={query}
                         placeholder="Search jobs . . ." 
-                        onChange={handleChange}
+                        onChange={onChange}
                         className="searchBox"/>
                 </span>
                 <span>
-                 <button onClick={handleSearch}
+                 <button onClick={onSearch}
                          className="searchButton">
                  <ImSearch />
                  </button>
