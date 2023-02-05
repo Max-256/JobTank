@@ -8,8 +8,7 @@ const jobs = [
         title: "Accountant",
         location: "Kampala, Uganda",
         duties: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae iure harum minima illo? Laudantium, assumenda, itaque consequuntur quo voluptate libero ab nesciunt aliquam quod beatae natus in temporibus quia odit accusantium dolores? Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",
-        qualifications: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae iure harum minima illo? Laudantium, assumenda, itaque consequuntur quo voluptate libero ab nesciunt aliquam quod beatae natus in temporibus quia odit accusantium dolores? Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",
-        experience: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
+        qualifications: "Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",        experience: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
         benefits: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
         howToApply: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, magnam?",
         other: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci, laborum maiores facere optio dolorem."
@@ -22,8 +21,7 @@ const jobs = [
         title: "Driver",
         location: "Mombasa, Kenya",
         duties: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae iure harum minima illo? Laudantium, assumenda, itaque consequuntur quo voluptate libero ab nesciunt aliquam quod beatae natus in temporibus quia odit accusantium dolores? Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",
-        qualifications: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae iure harum minima illo? Laudantium, assumenda, itaque consequuntur quo voluptate libero ab nesciunt aliquam quod beatae natus in temporibus quia odit accusantium dolores? Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",
-        experience: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
+        qualifications: "Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",        experience: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
         benefits: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
         howToApply: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, magnam?",
         other: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci, laborum maiores facere optio dolorem."
@@ -36,8 +34,7 @@ const jobs = [
         title: "Senior Lecturer",
         location: "Kampala, Uganda",
         duties: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae iure harum minima illo? Laudantium, assumenda, itaque consequuntur quo voluptate libero ab nesciunt aliquam quod beatae natus in temporibus quia odit accusantium dolores? Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",
-        qualifications: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae iure harum minima illo? Laudantium, assumenda, itaque consequuntur quo voluptate libero ab nesciunt aliquam quod beatae natus in temporibus quia odit accusantium dolores? Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",
-        experience: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
+        qualifications: "Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",        experience: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
         benefits: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
         howToApply: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, magnam?",
         other: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci, laborum maiores facere optio dolorem."
@@ -50,8 +47,7 @@ const jobs = [
         title: "Java Developer",
         location: "Miami, USA",
         duties: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae iure harum minima illo? Laudantium, assumenda, itaque consequuntur quo voluptate libero ab nesciunt aliquam quod beatae natus in temporibus quia odit accusantium dolores? Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",
-        qualifications: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae iure harum minima illo? Laudantium, assumenda, itaque consequuntur quo voluptate libero ab nesciunt aliquam quod beatae natus in temporibus quia odit accusantium dolores? Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",
-        experience: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
+        qualifications: "Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",        experience: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
         benefits: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
         howToApply: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, magnam?",
         other: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci, laborum maiores facere optio dolorem."
@@ -64,7 +60,7 @@ const jobs = [
         title: "Medical Doctor",
         location: "Cairo, Egypt",
         duties: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae iure harum minima illo? Laudantium, assumenda, itaque consequuntur quo voluptate libero ab nesciunt aliquam quod beatae natus in temporibus quia odit accusantium dolores? Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",
-        qualifications: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae iure harum minima illo? Laudantium, assumenda, itaque consequuntur quo voluptate libero ab nesciunt aliquam quod beatae natus in temporibus quia odit accusantium dolores? Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",
+        qualifications: "Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",
         experience: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
         benefits: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
         howToApply: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, magnam?",

@@ -5,7 +5,7 @@ import {ImSearch} from 'react-icons/im';
 function Hero({onSearch, onChange, query}) {
     return (
         <div className='hero' >
-            <h4>"Walking with you to your dream job"</h4>
+            <h5>"Walking with you to your dream job"</h5>
 
             <div className='searchGroup'>
                 <span>

@@ -19,7 +19,9 @@ function BasicExample() {
       <Container>
         <Link to="/"
           className='logo' 
-          onClick={() => setExpanded(false)}>JobTank</Link>
+          onClick={() => { 
+            setExpanded(false); 
+            window.location ="/" }}>JobTank</Link>
         
           <Navbar.Toggle aria-controls="basic-navbar-nav"
           onClick = {() => setExpanded(expanded ? false : "expanded")}
