@@ -8,8 +8,22 @@ import {getJobs} from '../services/jobService';
 function Home(props) {
     const [query, setQuery] = useState("");
 
-    const [jobs, setJobs] = useState([]);
-    useEffect(() => setJobs(getJobs()),[]);
+    let [jobs, setJobs] = useState([]);
+
+
+
+    useEffect(() => {
+        (async () => {
+            const jobs = await getJobs();
+            setJobs(jobs);
+        })();
+       
+
+    });
+
+
+
+
     
     const handleChange = e => setQuery(e.target.value);
 
@@ -19,7 +33,7 @@ function Home(props) {
         
         const searchQuery = query.toLowerCase();
 
-        const filtered = getJobs().filter(j => 
+        const filtered =  getJobs().filter(j => 
             j.title.toLowerCase().includes(searchQuery) ||
             j.location.toLowerCase().includes(searchQuery) ||
             j.companyName.toLowerCase().includes(searchQuery));
