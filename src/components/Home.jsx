@@ -8,32 +8,25 @@ import {getJobs} from '../services/jobService';
 function Home(props) {
     const [query, setQuery] = useState("");
 
-    let [jobs, setJobs] = useState([]);
-
-
-
+    const [jobs, setJobs] = useState([]);
     useEffect(() => {
         (async () => {
             const jobs = await getJobs();
-            setJobs(jobs);
+            setJobs(jobs.data);
         })();
-       
-
-    });
-
-
-
-
+    }, []);
     
     const handleChange = e => setQuery(e.target.value);
 
-    const handleSearch = () => {
+    const handleSearch = async () => {
         if(query.trim() === "") 
         return toast.warn("Search box is empty");
         
         const searchQuery = query.toLowerCase();
 
-        const filtered =  getJobs().filter(j => 
+        const {data} = await getJobs();
+
+        const filtered =  data.filter(j => 
             j.title.toLowerCase().includes(searchQuery) ||
             j.location.toLowerCase().includes(searchQuery) ||
             j.companyName.toLowerCase().includes(searchQuery));
