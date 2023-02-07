@@ -19,6 +19,7 @@
     padding: 0.5rem;
     border-radius: 5px;
     color: #12143b;
+    margin-right: 0.5rem;
 }
 
 .browse:hover{
@@ -39,6 +40,13 @@
 
 .support h5 {
     margin-bottom: 1.5rem;
+}
+
+.contact{
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+    background: lightgray;
 }
 
 /* Register */

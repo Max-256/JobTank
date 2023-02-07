@@ -7,7 +7,6 @@ import About from './components/About';
 import Recruiter from './components/Recruiter';
 import Register from './components/Register';
 import SignIn from './components/Sign-in';
-import Support from './components/Support';
 import JobDetails from './components/JobDetails';
 import Home from './components/Home';
 import NotFound from './components/NotFound';
@@ -24,7 +23,6 @@ function App() {
       <Route path='/recruiter' component={Recruiter}/>
       <Route path='/register' component={Register}/>
       <Route path='/sign-in' component={SignIn}/>
-      <Route path='/support' component={Support}/>
       <Route path='/job-details/:id' component={JobDetails}/>
       <Route path='/notfound' component={NotFound}/>
       <Route path='/' exact component={Home}/>

@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -17,9 +18,22 @@ function About(props) {
         of application as specified by the recruiter.
       </p>
       <p>We narrow the information gap between recruiters and applicants</p>
+
       <Link className="browse" to="/">
         Browse Jobs
-      </Link>
+      </Link> 
+      OR
+      <span className="contact" to="/">
+        Contact us ☟
+      </span>
+      <div className="mt-5 support">
+      <h5>We are right here...</h5>
+       <p>    
+        Reach us directly through..<br />
+        Phone: +# ### ###  <br />
+        email: jobtank@gmail.org
+       </p>
+    </div>
     </div>
   );
 }
