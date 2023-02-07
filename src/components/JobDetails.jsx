@@ -7,56 +7,57 @@ function JobDetails(props) {
     
     const id = props.match.params.id;
     
-    const [job, setJob] = useState([]);
-    useEffect(() => setJob(getJob(id)), []);
+    const [job, setJob] = useState({});
 
-    return (
-        <div>
-            { job.map( (jb, index) => 
-            <div key={index} className='mt-4 job-details'>
+    useEffect(() => {
+        (async () => {
+            const job = await getJob(id);
+            setJob(job.data);
+        })();
+    },[]);
+
+    return (          
+            <div className='mt-4 job-details'>
             <h5>JOB DETAILS</h5>
 
             <div className='row'>
                 <div className='col'>
                     <h6>Company</h6>
-                    <p>{jb.companyName}</p>
+                    <p>{job.companyName}</p>
                 </div>
                 <div className='col'>
                     <h6>Deadline</h6>
-                    <p>{jb.deadline}</p>
+                    <p>{job.deadline}</p>
                 </div>
             </div>
 
-
             <h6>About Company</h6>
-            <p>{jb.aboutCompany}</p>
+            <p>{job.aboutCompany}</p>
 
             <h5>JOB SUMMARY</h5>
 
             <h6>Title</h6>
-            <p>{jb.title}</p>
+            <p>{job.title}</p>
 
             <h6>Location</h6>
-            <p>{jb.location}</p>
+            <p>{job.location}</p>
 
             <h6>Duties And Responsibilities</h6>
-            <p>{jb.duties}</p>
+            <p>{job.duties}</p>
 
             <h6>Job Requirements</h6>
-            <p>{jb.requirements}</p>
+            <p>{job.requirements}</p>
 
             <h6>Benefits</h6>
-            <p>{jb.benefits}</p>
+            <p>{job.benefits}</p>
 
             <h6>How To apply</h6>
-            <p>{jb.howToApply}</p>
+            <p>{job.howToApply}</p>
 
             <h6>Other</h6>
-            <p>{jb.other}</p>
+            <p>{job.other}</p>
 
             <Link className='back' to="/">Back Home</Link>
-        </div>
-        )}
         </div>
     );
 }
