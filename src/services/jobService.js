@@ -1,80 +1,24 @@
 
-const jobs = [
-    {   
-        _id: 1,
-        companyName: "Deloitte",
-        deadline: "1/5/2023",
-        aboutCompany: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam debitis doloribus ipsam, repudiandae optio non ipsa facilis modi explicabo maxime placeat reiciendis nostrum deserunt nemo?",
-        title: "Accountant",
-        location: "Kampala, Uganda",
-        duties: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae iure harum minima illo? Laudantium, assumenda, itaque consequuntur quo voluptate libero ab nesciunt aliquam quod beatae natus in temporibus quia odit accusantium dolores? Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",
-        requirements: "Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",        experience: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
-        benefits: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
-        howToApply: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, magnam?",
-        other: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci, laborum maiores facere optio dolorem."
-    },
-    {
-        _id: 2,
-        companyName: "Speedag International",
-        deadline: "1/5/2023",
-        aboutCompany: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam debitis doloribus ipsam, repudiandae optio non ipsa facilis modi explicabo maxime placeat reiciendis nostrum deserunt nemo?",
-        title: "Driver",
-        location: "Mombasa, Kenya",
-        duties: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae iure harum minima illo? Laudantium, assumenda, itaque consequuntur quo voluptate libero ab nesciunt aliquam quod beatae natus in temporibus quia odit accusantium dolores? Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",
-        requirements: "Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",        experience: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
-        benefits: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
-        howToApply: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, magnam?",
-        other: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci, laborum maiores facere optio dolorem."
-    },
-    {
-        _id: 3,
-        companyName: "Makerere University",
-        deadline: "1/5/2023",
-        aboutCompany: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam debitis doloribus ipsam, repudiandae optio non ipsa facilis modi explicabo maxime placeat reiciendis nostrum deserunt nemo?",
-        title: "Senior Lecturer",
-        location: "Kampala, Uganda",
-        duties: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae iure harum minima illo? Laudantium, assumenda, itaque consequuntur quo voluptate libero ab nesciunt aliquam quod beatae natus in temporibus quia odit accusantium dolores? Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",
-        requirements: "Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",        experience: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
-        benefits: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
-        howToApply: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, magnam?",
-        other: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci, laborum maiores facere optio dolorem."
-    },
-    {
-        _id: 4,
-        companyName: "Stanbic Bank",
-        deadline: "1/5/2023",
-        aboutCompany: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam debitis doloribus ipsam, repudiandae optio non ipsa facilis modi explicabo maxime placeat reiciendis nostrum deserunt nemo?",
-        title: "Java Developer",
-        location: "Miami, USA",
-        duties: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae iure harum minima illo? Laudantium, assumenda, itaque consequuntur quo voluptate libero ab nesciunt aliquam quod beatae natus in temporibus quia odit accusantium dolores? Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",
-        requirements: "Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",        experience: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
-        benefits: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
-        howToApply: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, magnam?",
-        other: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci, laborum maiores facere optio dolorem."
-    },
-    {
-        _id: 5,
-        companyName: "Agha Khan Hospital",
-        deadline: "1/5/2023",
-        aboutCompany: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam debitis doloribus ipsam, repudiandae optio non ipsa facilis modi explicabo maxime placeat reiciendis nostrum deserunt nemo?",
-        title: "Medical Doctor",
-        location: "Cairo, Egypt",
-        duties: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae iure harum minima illo? Laudantium, assumenda, itaque consequuntur quo voluptate libero ab nesciunt aliquam quod beatae natus in temporibus quia odit accusantium dolores? Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",
-        requirements: "Dolores libero id saepe modi nisi, sequi, accusamus itaque est doloremque qui temporibus amet eos voluptatem officiis quidem esse hic eveniet harum? Magnam obcaecati amet vitae rerum.",
-        benefits: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio qui vitae laudantium incidunt quo alias.",
-        howToApply: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, magnam?",
-        other: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore adipisci, laborum maiores facere optio dolorem."
-    }
+import http from './httpService';
+import config from '../config.json';
+const apiEndPoint  = config.apiUrl + "/jobs";
 
-];
+export function getJobs(){
+    return http.get(apiEndPoint);
+}
 
-const getJobs = () => {
-    return jobs;
-};
+export function getJob(id){
+    return http.get(apiEndPoint + "/" + id);
+}
 
-const getJob = (id) => {
-    return jobs.filter( job => job._id == id);
-};
+export function postJob(job){
+    return http.post(apiEndPoint, job);
+}
 
-module.exports = { getJobs, getJob };
+export function putJob(job){
+    return http.put(apiEndPoint + "/" + job._id, job);
+}
 
+export function deleteJob(id){
+    return http.delete(apiEndPoint + "/" + id);
+}
