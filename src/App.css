@@ -1,4 +1,8 @@
 
+.body{
+    scroll-behavior: smooth;
+}
+
 .navbar{
     background: #12143b !important; 
 }

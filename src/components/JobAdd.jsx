@@ -33,8 +33,8 @@ function JobAdd({jobs}) {
             </div>
 
             <div>
-                <h6>Qualifications</h6>
-                <p>{job.qualifications}</p>                
+                <h6>Job Requirements</h6>
+                <p>{job.requirements}</p>                
                 <Link className='detailsLink' to={`/job-details/${job._id}`}>more details</Link>
             </div>
             </div>)

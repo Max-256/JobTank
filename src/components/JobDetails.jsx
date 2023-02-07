@@ -42,11 +42,8 @@ function JobDetails(props) {
             <h6>Duties And Responsibilities</h6>
             <p>{jb.duties}</p>
 
-            <h6>Qualifications And Skills</h6>
-            <p>{jb.qualifications}</p>
-
-            <h6>Proffesional Experience</h6>
-            <p>{jb.experience}</p>
+            <h6>Job Requirements</h6>
+            <p>{jb.requirements}</p>
 
             <h6>Benefits</h6>
             <p>{jb.benefits}</p>
