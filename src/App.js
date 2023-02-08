@@ -8,6 +8,7 @@ import Recruiter from './components/Recruiter';
 import Register from './components/Register';
 import SignIn from './components/Sign-in';
 import JobDetails from './components/JobDetails';
+import ProtectedRoute from './components/protectedRoute';
 import Home from './components/Home';
 import NotFound from './components/NotFound';
 import './App.css';
@@ -20,7 +21,7 @@ function App() {
       <main className='container'>
       <Switch>
       <Route path='/about' component={About}/>
-      <Route path='/recruiter' component={Recruiter}/>
+      <ProtectedRoute path='/recruiter' component={Recruiter}/>
       <Route path='/register' component={Register}/>
       <Route path='/sign-in' component={SignIn}/>
       <Route path='/job-details/:id' component={JobDetails}/>
