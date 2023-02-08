@@ -1,12 +1,13 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import Joi from 'joi-browser';
 import useForm from '../hooks/useForm';
 import { Form } from 'react-bootstrap';
-import {toast} from 'react-toastify';
 import { register  } from '../services/recruiter';
 
 function Register(props) {
+    const [error, setError] = useState({});
+
     const formData = {
         username: "",
         email: "",
@@ -22,11 +23,13 @@ function Register(props) {
     const doSubmit = async () => {
         try{
             const response = await register(data);
-            console.log(response.data);
+            localStorage.setItem("token",response.data);
+
+            window.location = '/recruiter';
         }
         catch(ex){
             if(ex.response && ex.response.status === 400)
-            toast.error(ex.response.data);
+            setError({message: ex.response.data});
         }     
     }
 
@@ -36,6 +39,7 @@ function Register(props) {
     return (
         <div className='formBorder'>
             <Form onSubmit={handleSubmit}>
+                {error && <p className='error'>{error.message}</p>}
                 {renderInput('username', 'Username')}
                 {renderInput('email', 'Email', 'email')}
                 {renderInput('password', 'Password', 'password')}
