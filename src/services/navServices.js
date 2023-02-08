@@ -1,7 +1,6 @@
 const navItems = [
     { title: "Recruiter", path: "/recruiter" },
-    { title: "About", path: "/about" },
-    { title: "Sign-in", path: "/sign-in" }
+    { title: "About", path: "/about" }
 ]
 
 const getNavItems = () => { return navItems; }
