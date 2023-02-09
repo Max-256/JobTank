@@ -4,13 +4,13 @@ import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { getJob } from '../services/jobService';
 import Input from './Input';
+import Textarea from './Textarea';
 
 const EditJob = (props) => {
     const jobId = props.match.params.id;
 
     const [job, setJob] = useState({});
     const [error, setError] = useState({});
-
 
     useEffect(() => {
         (async () => {
@@ -23,12 +23,6 @@ const EditJob = (props) => {
             }            
         })();
     },[]);
-
-    
-
-    const handleChange = e => {
-        // setJob({...job, [e.target.name] : e.target.value})
-    }
 
     const handleSave = () => {
         console.log(job);
@@ -48,20 +42,11 @@ const EditJob = (props) => {
               label={"Location"} 
               job={job} setJob={setJob}/>
 
-    
-
-            <div className="mb-3">
-              <label htmlFor="aboutCompany" className="form-label">About Company</label>
-              <textarea
-              name='aboutCompany'
+            <Textarea 
+              name={"aboutCompany"}
               value={job.aboutCompany}
-              onChange={handleChange} 
-              className="form-control" 
-              id="aboutCompany" 
-              rows="3">
-              </textarea>
-            </div>
-
+              label="About Company"
+              job={job} setJob={setJob} />
 
             <Input 
               name={"title"}  
@@ -77,59 +62,29 @@ const EditJob = (props) => {
               job={job} setJob={setJob}/>
 
 
-
-            <div className="mb-3">
-              <label htmlFor="duties" className="form-label">Duties</label>
-              <textarea
-              name='duties'
+            <Textarea 
+              name={"duties"}
               value={job.duties}
-              onChange={handleChange} 
-              className="form-control" 
-              id="duties" 
-              rows="3">
-              </textarea>
-            </div>
+              label="Duties and Responsibilities"
+              job={job} setJob={setJob} />
 
-            <div className="mb-3">
-              <label htmlFor="requirements" className="form-label">Requirements</label>
-              <textarea
-              name='requirements'
+            <Textarea 
+              name={"requirements"}
               value={job.requirements}
-              onChange={handleChange} 
-              className="form-control" 
-              id="requirements" 
-              rows="3">
-              </textarea>
-            </div>
+              label="Requirements"
+              job={job} setJob={setJob} />  
 
-            <div className="mb-3">
-              <label htmlFor="howToApply" className="form-label">How to apply</label>
-              <textarea
-              name='howToApply'
+            <Textarea 
+              name={"howToApply"}
               value={job.howToApply}
-              onChange={handleChange} 
-              className="form-control" 
-              id="howToApply" 
-              rows="3">
-              </textarea>
-            </div>
+              label="How to apply"
+              job={job} setJob={setJob} />
 
-
-
-
-
-
-            
             <button 
-            className='btn btn-primary'
-            onClick={handleSave}>
+              className='btn btn-primary'
+              onClick={handleSave}>
                 save changes
-            </button>
-
-
-
-
-        
+            </button>        
         </div>
     );
 };
