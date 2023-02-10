@@ -15,8 +15,8 @@ export function postJob(job){
     return http.post(apiEndPoint, job);
 }
 
-export function putJob(job){
-    return http.put(apiEndPoint + "/" + job._id, job);
+export function putJob(job, jobID){
+    return http.put(apiEndPoint + "/" + jobID, job);
 }
 
 export function deleteJob(id){

@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import { getJobs, putJob } from '../services/jobService';
+import { getJobs, deleteJob} from '../services/jobService';
 import JobTable from './JobTable';
 
 function Recruiter(props) {
@@ -22,8 +22,15 @@ function Recruiter(props) {
         })();
     },[]);
 
-   const handleDelete = (id) => {
-    console.log('delete clicked' + id)
+   const handleDelete = async (id) => {
+    try{
+        await deleteJob(id)
+        window.location.reload();
+    }catch(ex){
+        setError({message: error.message});
+        toast.error(error.message);
+    }
+        
    }
 
     return (

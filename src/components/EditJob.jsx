@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import { getJob } from '../services/jobService';
+import { getJob, putJob } from '../services/jobService';
 import Input from './Input';
 import Textarea from './Textarea';
 
@@ -24,12 +24,22 @@ const EditJob = (props) => {
         })();
     },[]);
 
-    const handleSave = () => {
-        console.log(job);
+    const handleSave = async () => {
+        delete job._id;
+        delete job.__v;
+
+        try{
+          await putJob(job, jobId);
+          window.location = "/";
+        }catch(ex){
+          setError({message: ex.response.data});
+          toast.error(error.message);
+        }    
     } 
 
     return (
-        <div>             
+        <div className='jobForm'>
+            <h5>Company Profile</h5>             
             <Input 
               name={"companyName"}  
               value={job.companyName} 
@@ -47,6 +57,8 @@ const EditJob = (props) => {
               value={job.aboutCompany}
               label="About Company"
               job={job} setJob={setJob} />
+
+            <h5>Job Profile</h5>       
 
             <Input 
               name={"title"}  
@@ -81,7 +93,7 @@ const EditJob = (props) => {
               job={job} setJob={setJob} />
 
             <button 
-              className='btn btn-primary'
+              className='btn btn-primary mb-5'
               onClick={handleSave}>
                 save changes
             </button>        

@@ -24,20 +24,20 @@ const JobTable = ({jobs, onDelete}) => {
              { jobs.map( j => 
              <tbody key={j._id}>
                 <tr>
-                  <th scope="row">{j.title}</th>
+                  <td scope="row">{j.title}</td>
                   <td>{j.companyName}</td>
                   <td>
                       <Link
                       to={`/editJob/${j._id}`} 
-                      className='btn btn-primary'>
-                       Edit
+                      className='edit'>
+                       edit
                       </Link>
                    </td>
                    <td>
                       <button 
-                      className='btn btn-danger'
+                      className='delete'
                       onClick={() => {onDelete(j._id)}}>
-                      Delete
+                      delete
                       </button>
                    </td>
                 </tr>
