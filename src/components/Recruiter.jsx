@@ -34,7 +34,7 @@ function Recruiter(props) {
    }
 
     return (
-        <div>
+        <div>  
             <JobTable
             jobs={jobs} 
             onDelete={handleDelete}

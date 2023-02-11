@@ -4,13 +4,17 @@ import { Link } from 'react-router-dom';
 const JobTable = ({jobs, onDelete}) => {
     
     return (
-        <div className='mt-5'>
+        <div className='mt-5 jobTable'>
             <Link 
             to = "/jobform"
             className='btn btn-primary mb-3'>
               Add Job
-            </Link>
-        
+            </Link> 
+
+            {jobs.length === 0 && 
+              <h6>Click add job to get started</h6>}
+
+         {jobs.length > 0 &&           
          <table className="table">
               <thead>
                 <tr>
@@ -42,8 +46,7 @@ const JobTable = ({jobs, onDelete}) => {
                    </td>
                 </tr>
              </tbody>)}
-
-        </table>
+        </table>}
         </div>
     );
 };

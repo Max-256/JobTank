@@ -246,3 +246,8 @@
     background: red;
     color: white;
 }
+
+.jobTable{
+    max-width: 900px;
+    margin: auto; 
+}

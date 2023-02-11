@@ -27,6 +27,7 @@ const EditJob = (props) => {
     const handleSave = async () => {
         delete job._id;
         delete job.__v;
+        delete job.datePosted;
 
         try{
           await putJob(job, jobId);
