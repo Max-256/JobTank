@@ -2,8 +2,10 @@
 import React from 'react';
 import Joi from 'joi-browser';
 import useForm from '../hooks/useForm';
+import {toast} from 'react-toastify';
 import { Form } from 'react-bootstrap';
 import { postJob } from '../services/jobService';
+import { getCurrentUser } from '../services/authService';
 
 const JobForm = () => {
     const formData = {
@@ -15,6 +17,7 @@ const JobForm = () => {
         duties: "",
         requirements: "",
         howToApply: "",
+       
     };
 
     const formSchema = {
@@ -25,17 +28,16 @@ const JobForm = () => {
         duties: Joi.string().trim().required(),
         requirements: Joi.string().trim().required(),
         howToApply: Joi.string().trim().max(255).required(),
-        deadline: Joi.date().required()
+        deadline: Joi.date().required(),
     }
 
     const doSubmit = async () => {
+        const user = getCurrentUser();
+        const job = {...data, userEmail: user.email}
         try{
-            await postJob(data);
+            await postJob(job);
             window.location = "/";
-        }catch(ex){
-            console.log(ex.response.data);
-        }
-        
+        } catch(ex){ toast.error(ex.response.data); }        
     }
 
     const {data, renderInput, renderTextarea, renderButton, handleSubmit} = 
@@ -44,7 +46,7 @@ const JobForm = () => {
     return (
         <div className='jobForm'>
             <Form onSubmit={handleSubmit}>
-            <h5>COMPANY PROFILE</h5>                
+            <h5>COMPANY PROFILE</h5>            
             {renderInput("companyName", "Company Name")}
             {renderInput("location", "Location")}
             {renderTextarea("aboutCompany", "About Company (brief)")}
