@@ -37,17 +37,18 @@ function SignIn(props) {
     useForm(formData, formSchema, doSubmit);
 
     return (
-        <div className='formBorder'>
-           
-            <Form onSubmit={handleSubmit}>
+        <div >           
+            <Form className='formBorder'onSubmit={handleSubmit}>
                 {error && <p className='error'>{error.message}</p>}
                 {renderInput('email', 'Email')}
                 {renderInput('password', 'Password', 'password')}
-                {renderButton('Sign in')}
-                <br/>
-                Don't have an account?
-                <Link className='registerLink' to='/register'>Sign up</Link>            
+                {renderButton('Log in')}        
             </Form>
+
+            <p className='noAccount'>Don't have an account? 
+            <Link className='registerLink' to='/register'>Sign up</Link></p>
+             
+                   
         </div>
     );
 }

@@ -5,35 +5,22 @@ import { Link } from "react-router-dom";
 function About(props) {
   return (
     <div className="mt-5 about">
-      <h3>Hi, welcome to the JobTank and here's our story...</h3>
+      <h4>Hi, here's what we do...</h4>
       <p>
-        We are a home to both recruiters and job seekers by providing a bridge
-        in-between.
+        We are an information bridge between recruiters and job seekers
       </p>
       <p>
-        In the JobTank, recruiters post open jobs. These are then accessed by a 
-        wide number of prospective applicants which increases the chances of 
-        getting really talented candidates. <br/>
-        Applications then come in from a pool of candidates following the means
-        of application as specified by the recruiter.
+        Recruiters register/login and post jobs which are then accessed by many
+        job seekers.<br/>
+        Jobs can be searched by either title or company name or location from the 
+        growing pool of various jobs posted.
       </p>
-      <p>We narrow the information gap between recruiters and applicants</p>
+      <p>"We increase chances"</p>
 
       <Link className="browse" to="/">
-        Browse Jobs
+        Go to jobs
       </Link> 
-      OR
-      <span className="contact" to="/">
-        Contact us ☟
-      </span>
-      <div className="mt-5 support">
-      <h5>We are right here...</h5>
-       <p>    
-        Reach us directly through..<br />
-        Phone: +# ### ###  <br />
-        email: jobtank@gmail.org
-       </p>
-    </div>
+      
     </div>
   );
 }

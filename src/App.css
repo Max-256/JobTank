@@ -34,6 +34,7 @@
 .about{
     margin: auto;
     max-width: 1000px;
+    text-align: center;
 }
 
 /* support */
@@ -56,12 +57,33 @@
 /* Register */
 
 .formBorder{
-    border: 1px solid  #dfe1fc;
-    max-width: 300px;
-    padding: 1rem;
-    margin: 15% auto;
+    border: 1px solid  lightgray;
+    max-width: 280px;
+    padding: 0.3rem 0.5rem;
     border-radius: 5px;
-    background: white;
+    margin: auto;
+    margin-top: 10rem;
+}
+
+.noAccount{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1.5rem;    
+}
+
+
+@media screen and (max-width: 768px) {
+    .formBorder{
+       max-width: 230px;
+       margin-top: 4rem; 
+    }
+
+    .formBorder button{
+       padding: 0.1rem 0.5rem;
+    }
+    .formBorder .form-control{
+        height: 30px;
+    }
 }
 
 /* login */
