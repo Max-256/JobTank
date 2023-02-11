@@ -10,3 +10,4 @@ export function register(recruiter) {
         password: recruiter.password
     });
 }
+

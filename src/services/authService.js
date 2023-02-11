@@ -1,8 +1,10 @@
 
 import http from './httpService';
 import config from '../config.json';
+import { getRecruiter } from './recruiter';
 import jwtDecode from 'jwt-decode';
-const apiEndPoint = config.apiUrl + "/auth" 
+const apiEndPoint = config.apiUrl + "/auth"
+
 
 export function login(email, password){
     return http.post(apiEndPoint, { email, password });

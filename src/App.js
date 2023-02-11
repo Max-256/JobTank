@@ -22,6 +22,8 @@ function App() {
   const [user, setUser] = useState({});
   useEffect(() => setUser(getCurrentUser()),[]);
 
+  console.log(user);
+
   return (
     <div className="App">
       <ToastContainer />

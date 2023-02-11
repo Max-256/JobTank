@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { NavLink, Link } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -36,11 +36,14 @@ function TopNav({user}) {
                 {item.title} </NavLink>)
             }
 
-            { user &&                    
+            { user &&
+            <Fragment>
+              <span className='nav-link'>{user.username}</span>                   
               <NavLink to="/logout"
               className='nav-link'
               onClick={() => setExpanded(false)}>Log out
-              </NavLink>}
+              </NavLink>
+            </Fragment>}   
 
             {!user && 
               <NavLink to="/sign-in" 
