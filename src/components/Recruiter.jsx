@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { getCurrentUser } from '../services/authService';
 import { getJobs, deleteJob} from '../services/jobService';
+import Dashboard from './Dashboard';
 import JobTable from './JobTable';
 
 function Recruiter(props) {
@@ -31,6 +32,7 @@ function Recruiter(props) {
 
     return (
         <div>  
+            <Dashboard user={user} jobs={jobs} />
             <JobTable
             jobs={jobs} 
             onDelete={handleDelete}
