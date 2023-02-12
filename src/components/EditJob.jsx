@@ -5,11 +5,13 @@ import { toast } from 'react-toastify';
 import { getJob, putJob } from '../services/jobService';
 import Input from './Input';
 import Textarea from './Textarea';
+import Spinner from './comon/Spinner';
 
 const EditJob = (props) => {
     const jobId = props.match.params.id;
 
     const [job, setJob] = useState({});
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState({});
 
     useEffect(() => {
@@ -17,6 +19,7 @@ const EditJob = (props) => {
             try{
                 const response = await getJob(jobId);
                 setJob(response.data);
+                setLoading(false);
             }catch(ex){
                 setError({message: ex.response.data});
                 toast.error(error.message);
@@ -39,7 +42,9 @@ const EditJob = (props) => {
     } 
 
     return (
-        <div className='jobForm'>
+      <div>
+        {loading && <Spinner />}
+        {!loading && <div className='jobForm'>
             <h5>Company Profile</h5>             
             <Input 
               name={"companyName"}  
@@ -98,7 +103,8 @@ const EditJob = (props) => {
               onClick={handleSave}>
                 save changes
             </button>        
-        </div>
+        </div>}
+      </div>  
     );
 };
 
