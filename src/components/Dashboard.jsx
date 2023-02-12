@@ -27,7 +27,7 @@ const Dashboard = ({user, jobs}) => {
                 </div>}                      
                     
                 <p><Link to = "/jobform" className='btn btn-primary'>
-                  Add Job
+                   + Add Job
                 </Link> </p>          
             </div>
         </div>

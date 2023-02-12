@@ -4,15 +4,18 @@ import {toast} from 'react-toastify';
 import Hero from './Hero';
 import JobAdd from './JobAdd';
 import {getJobs} from '../services/jobService';
+import Spinner from './comon/Spinner';
 
 function Home(props) {
     const [query, setQuery] = useState("");
+    const [loading, setLoading] = useState(true);
 
     const [jobs, setJobs] = useState([]);
     useEffect(() => {
         (async () => {
             const jobs = await getJobs();
             setJobs(jobs.data);
+            setLoading(false);
         })();
     }, []);
     
@@ -48,6 +51,7 @@ function Home(props) {
              onChange={handleChange}
              query={query} 
              />
+             {loading && <Spinner />}
             <JobAdd jobs={jobs}/>
         </div>
     );

@@ -5,9 +5,11 @@ import { getCurrentUser } from '../services/authService';
 import { getJobs, deleteJob} from '../services/jobService';
 import Dashboard from './Dashboard';
 import JobTable from './JobTable';
+import Spinner from './comon/Spinner';
 
 function Recruiter(props) {
     const [jobs, setJobs] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const user = getCurrentUser();
 
@@ -18,6 +20,7 @@ function Recruiter(props) {
                 const jobs = response.data.filter(job =>  
                     job.userEmail === user.email);
                 setJobs(jobs);
+                setLoading(false);
             } catch(ex){ toast.error(ex.response.data); }
             
         })();
@@ -33,6 +36,7 @@ function Recruiter(props) {
     return (
         <div>  
             <Dashboard user={user} jobs={jobs} />
+            {loading && <Spinner/>}
             <JobTable
             jobs={jobs} 
             onDelete={handleDelete}

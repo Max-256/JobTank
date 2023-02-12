@@ -2,22 +2,27 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getJob } from '../services/jobService';
+import Spinner from './comon/Spinner';
 
 function JobDetails(props) {
     
     const id = props.match.params.id;
     
     const [job, setJob] = useState({});
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         (async () => {
             const job = await getJob(id);
             setJob(job.data);
+            setLoading(false);
         })();
     },[]);
 
-    return (          
-            <div className='mt-4 job-details'>
+    return ( 
+        <div>
+        {loading && <Spinner />}         
+        {!loading && <div className='mt-4 job-details'>                
             <h5>JOB DETAILS</h5>
 
             <div className='row'>
@@ -58,6 +63,7 @@ function JobDetails(props) {
             <p>{job.other}</p>
 
             <Link className='back' to="/">Back Home</Link>
+        </div>}
         </div>
     );
 }

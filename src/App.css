@@ -327,3 +327,15 @@
 .lastPost{
     margin: 1.5rem 0;
 }
+
+.spin-gif{
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .spin-gif{
+        width: 200px;
+    }
+}
