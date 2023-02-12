@@ -36,7 +36,7 @@ const JobForm = () => {
         const job = {...data, userEmail: user.email}
         try{
             await postJob(job);
-            window.location = "/";
+            window.location = "/recruiter";
         } catch(ex){ toast.error(ex.response.data); }        
     }
 

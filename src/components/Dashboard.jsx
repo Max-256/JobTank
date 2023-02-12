@@ -9,7 +9,7 @@ const Dashboard = ({user, jobs}) => {
     return (
         <div className='dashboard grid-1x2 mt-5'>
             <div className='rec_profile'>
-                <div className='recruiterIcon'>Recruiter</div>
+                <div className='recruiterIcon'>JTanker</div>
                 <p>{user.username}</p>
                 <p>{user.email}</p>
             </div>

@@ -34,7 +34,7 @@ const EditJob = (props) => {
 
         try{
           await putJob(job, jobId);
-          window.location = "/";
+          window.location = "/recruiter";
         }catch(ex){
           setError({message: ex.response.data});
           toast.error(error.message);

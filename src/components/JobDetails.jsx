@@ -53,16 +53,10 @@ function JobDetails(props) {
             <h6>Job Requirements</h6>
             <p>{job.requirements}</p>
 
-            <h6>Benefits</h6>
-            <p>{job.benefits}</p>
-
             <h6>How To apply</h6>
             <p>{job.howToApply}</p>
 
-            <h6>Other</h6>
-            <p>{job.other}</p>
-
-            <Link className='back' to="/">Back Home</Link>
+            <Link className='back' to="/">Back To Jobs</Link>
         </div>}
         </div>
     );
