@@ -57,6 +57,7 @@ const useForm = (formData, formSchema, doSubmit) => {
       <Form.Group className="mb-3">
         <Form.Label>{label}</Form.Label>
         <Form.Control
+          className="input"
           name={name}
           value={data.name}
           type={type}
