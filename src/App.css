@@ -167,6 +167,10 @@ p{
     clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 80%);
 }
 
+.hero input {
+    font-size: 1.5rem;
+}
+
 @media screen and (max-width: 768px) {
     .hero{
         margin-left: -1rem;
