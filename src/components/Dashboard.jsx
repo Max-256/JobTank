@@ -19,7 +19,7 @@ const Dashboard = ({user, jobs}) => {
         
                 {lastJob && 
                  <div className='lastPost'>
-                    <h6>Last Post</h6>
+                    <h4>Last Post</h4>
                     <div className='row'>
                         <span className='col'>Job Title : {lastJob.title}</span>
                         <span className='col'>Company : {lastJob.companyName}</span>

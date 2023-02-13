@@ -24,7 +24,7 @@ function Recruiter(props) {
             } catch(ex){ toast.error(ex.response.data); }
             
         })();
-    },[]);
+    },[user.email]);
 
    const handleDelete = async (id) => {
     try{

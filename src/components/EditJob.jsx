@@ -12,8 +12,7 @@ const EditJob = (props) => {
 
     const [job, setJob] = useState({});
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState({});
-
+  
     useEffect(() => {
         (async () => {
             try{
@@ -21,11 +20,10 @@ const EditJob = (props) => {
                 setJob(response.data);
                 setLoading(false);
             }catch(ex){
-                setError({message: ex.response.data});
-                toast.error(error.message);
+                toast.error(ex.response.data);
             }            
         })();
-    },[]);
+    },[jobId]);
 
     const handleSave = async () => {
         delete job._id;
@@ -36,8 +34,7 @@ const EditJob = (props) => {
           await putJob(job, jobId);
           window.location = "/recruiter";
         }catch(ex){
-          setError({message: ex.response.data});
-          toast.error(error.message);
+          toast.error(ex.response.data);
         }    
     } 
 

@@ -17,7 +17,7 @@ function JobDetails(props) {
             setJob(job.data);
             setLoading(false);
         })();
-    },[]);
+    },[id]);
 
     return ( 
         <div>

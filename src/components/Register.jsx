@@ -25,7 +25,7 @@ function Register(props) {
             const response = await register(data);
             localStorage.setItem("token",response.data);
 
-            window.location = '/';
+            window.location = '/recruiter';
         }
         catch(ex){
             if(ex.response && ex.response.status === 400)

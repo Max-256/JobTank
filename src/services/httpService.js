@@ -14,9 +14,11 @@ axios.interceptors.response.use(null, error => {
 
     axios.defaults.headers.common['x-auth-token'] = getJwt();
 
-export default {
+const httpService = {
     get: axios.get,
     post: axios.post,
     put: axios.put,
     delete: axios.delete
-}
+}    
+
+export default httpService;

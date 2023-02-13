@@ -1,7 +1,6 @@
 
 import http from './httpService';
 import config from '../config.json';
-import { getRecruiter } from './recruiter';
 import jwtDecode from 'jwt-decode';
 const apiEndPoint = config.apiUrl + "/auth"
 

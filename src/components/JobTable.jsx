@@ -23,7 +23,7 @@ const JobTable = ({jobs, onDelete}) => {
              { jobs.map( j => 
              <tbody key={j._id}>
                 <tr>
-                  <td scope="row">{j.title}</td>
+                  <td>{j.title}</td>
                   <td>{j.companyName}</td>
                   <td>
                       <Link

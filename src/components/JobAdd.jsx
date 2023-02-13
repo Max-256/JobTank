@@ -15,25 +15,25 @@ function JobAdd({jobs}) {
                 <div className='col'>
                     <li className='row'>
                     <ul className='col-4'>Title:</ul> 
-                    <ul className='col'>{job.title}</ul>
+                    <ul className='col'><span>{job.title}</span></ul>
                     </li>
                     <li className='row'>
                     <ul className='col-4'>Company:</ul> 
-                    <ul className='col'>{job.companyName}</ul>
+                    <ul className='col'><span>{job.companyName}</span></ul>
                     </li>
                     <li className='row'>
                     <ul className='col-4'>Location:</ul> 
-                    <ul className='col'>{job.location}</ul>
+                    <ul className='col'><span>{job.location}</span></ul>
                     </li>
                     <li className='row'>
                     <ul className='col-4'>Deadline:</ul> 
-                    <ul className='col'>{job.deadline}</ul>
+                    <ul className='col'><span>{job.deadline}</span></ul>
                     </li>         
                 </div>
             </div>
 
             <div>
-                <h6>Job Requirements</h6>
+                <h5>Job Requirements</h5>
                 <p>{job.requirements}</p>                
                 <Link className='detailsLink' to={`/job-details/${job._id}`}>more details</Link>
             </div>
