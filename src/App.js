@@ -28,7 +28,7 @@ function App() {
       <Topnav user={user}/>
       <main className='container'>
       <Switch>
-      <Route path='/about' component={About}/>
+      <Route path='/jobtank.netlify.app/about' component={About}/>
       <ProtectedRoute path='/recruiter' component={Recruiter}/>
       <ProtectedRoute path='/jobform' component={JobForm}/>
       <ProtectedRoute path='/editJob/:id' component={EditJob}/>
