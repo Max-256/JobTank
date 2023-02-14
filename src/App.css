@@ -457,7 +457,7 @@ p{
 
 @media screen and (min-width: 1024px) {
     .requirements{
-        max-height: 200px;
+        max-height: 185px;
         overflow: hidden;
     }
 }
