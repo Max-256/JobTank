@@ -2,7 +2,7 @@
 @import "normalize.css/normalize.css";
 
 html{
-    font-size: 62.5%;
+    font-size: 70%;
 }
 
 .body{
@@ -447,5 +447,16 @@ p{
 @media screen and (max-width: 768px) {
     .spin-gif{
         width: 200px;
+    }
+}
+
+.requirements{
+    max-height: 165px;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+    .requirements{
+        max-height: 200px;
     }
 }

@@ -34,7 +34,7 @@ function JobAdd({jobs}) {
 
             <div>
                 <h5>Job Requirements</h5>
-                <p>{job.requirements}</p>                
+                <div className='requirements'><p>{job.requirements}</p></div>               
                 <Link className='detailsLink' to={`/job-details/${job._id}`}>more details</Link>
             </div>
             </div>)
